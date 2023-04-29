@@ -29,7 +29,7 @@ export default function Home() {
 
 	const filteredAssets = data.filter((asset) => {
 		return asset.name.toLowerCase().includes(filterInput.toLowerCase()) // filter the assets based on the user's input
-	})
+	});
 
 	useEffect(() => {
 		checkPolicyIdAssets()

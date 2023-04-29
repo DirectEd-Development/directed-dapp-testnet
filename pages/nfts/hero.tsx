@@ -12,7 +12,8 @@ export default function Home() {
 	const router = useRouter()
 
 	const query = router.asPath.split('?')[1]
-
+	const params = router.asPath.split('?')[0]
+	
 	return (
 		<>
 			<Meta title="NFT's Portal" description="Directed Ed NFT's portal page" />
@@ -22,7 +23,10 @@ export default function Home() {
 					<div className='nft-portal__assets'>
 						<div className='nft-portal__assets_header'>
 							<h3>Pick which Hero you’d like</h3>
-							<Link href='/update-metadata'>
+							<Link href={{
+								pathname: "/edit",
+								query: params
+							}}>
 								<Button variant='primary'>Edit Metadata</Button>
 							</Link>
 						</div>
