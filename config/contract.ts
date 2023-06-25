@@ -5,4 +5,4 @@ export const script: PlutusScript = {
     version: 'V2',
 };
 
-export const scriptAddr = resolvePlutusScriptAddress(script, 1);
+export const scriptAddr = resolvePlutusScriptAddress(script, 0);
