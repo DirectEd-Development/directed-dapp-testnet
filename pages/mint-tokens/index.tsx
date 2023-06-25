@@ -3,6 +3,18 @@ import { useState } from "react";
 import type { NextPage } from "next";
 import { script, scriptAddr } from "../../config/contract";
 import { Transaction, Data, BlockfrostProvider, resolveDataHash } from '@meshsdk/core';
+import { Layout } from '../../components';
+import { GetServerSideProps } from 'next';
+
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+	// Redirect all users unconditionally
+	return {
+		redirect: {
+			destination: '/', // Redirect to DirectEd Homepage
+			permanent: false,
+		},
+	};
+};
 
 const minttokens: NextPage = () => {
     const { wallet, connected, connecting } = useWallet();
@@ -56,28 +68,29 @@ const minttokens: NextPage = () => {
     };
 
     return (
-        <div>
-            <h1>Connect Wallet</h1>
-            <CardanoWallet />
-            {connected && (
-                <>
-                    <h1>Lock funds in your Contract</h1>
+        
+            <div>
+                <h1>Connect Wallet</h1>
+                <CardanoWallet />
+                {connected && (
+                    <>
+                        <h1>Lock funds in your Contract</h1>
 
-                    <button
-                        type="button"
-                        onClick={() => lockFunds()}
-                        disabled={connecting || loading}
-                        style={{
-                            margin: "8px",
-                            backgroundColor: connecting || loading ? "orange" : "grey",
-                        }}
-                    >
-                        Lock funds
-                    </button>
+                        <button
+                            type="button"
+                            onClick={() => lockFunds()}
+                            disabled={connecting || loading}
+                            style={{
+                                margin: "8px",
+                                backgroundColor: connecting || loading ? "orange" : "grey",
+                            }}
+                        >
+                            Lock funds
+                        </button>
 
-                </>
-            )}
-        </div>
+                    </>
+                )}
+            </div>
     );
 };
 
