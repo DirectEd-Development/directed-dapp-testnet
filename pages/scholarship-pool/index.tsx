@@ -1,9 +1,19 @@
 import type { NextPage } from 'next'
+import { GetServerSideProps } from 'next';
 import { Meta, DonorInfoTab, ScholarsCard, Layout } from '../../components'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import PopupModal from '../../components/PopupModal/PopupModal'
 
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+	// Redirect all users unconditionally
+	return {
+		redirect: {
+			destination: '/', // Redirect to DirectEd Homepage
+			permanent: false,
+		},
+	};
+};
 
 interface TransactionCount {
 	tx_hash: string
@@ -61,9 +71,10 @@ const ScholarshipPool: NextPage = () => {
 			})
 	}, [])
 
+
 	return (
 		<Layout>
-			
+
 			<PopupModal isOpen={isModalOpen} closeModal={handleCloseModal} handleReopenModal={handleReopenModal} />
 			{isModalOpen && (
 				<button onClick={handleReopenModal}></button>

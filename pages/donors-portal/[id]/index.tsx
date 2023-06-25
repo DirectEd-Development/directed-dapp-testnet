@@ -1,7 +1,18 @@
 import { NextPage, GetStaticPaths, GetStaticProps } from 'next'
 import { DonorLayout, StudentMilestone } from '../../../components'
 import { useRouter } from 'next/router'
+import { GetServerSideProps } from 'next';
 import { getLink } from '../../../utils/getLink'
+
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+	// Redirect all users unconditionally
+	return {
+		redirect: {
+			destination: '/', // Redirect to DirectEd Homepage
+			permanent: false,
+		},
+	};
+};
 
 const StudentProgess: NextPage = ({ students }: any) => {
 	const router = useRouter()

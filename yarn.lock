@@ -167,20 +167,20 @@
   resolved "https://registry.yarnpkg.com/@emurgo/cardano-serialization-lib-browser/-/cardano-serialization-lib-browser-11.1.0.tgz#6fc0bf620a41f476bc99d3ae1be6baf55a1febfd"
   integrity sha512-p1q3owF93myyUjsZGMM6xcNXg8r+XV5VEUIe9ZxHalAGOef3uXZW6zbuqy5BIx5geFpcvV7lxv1y6bQNYVcS3w==
 
-"@emurgo/cardano-serialization-lib-browser@11.3.0":
-  version "11.3.0"
-  resolved "https://registry.yarnpkg.com/@emurgo/cardano-serialization-lib-browser/-/cardano-serialization-lib-browser-11.3.0.tgz#d45716e4034db2ba3e757c5e947d01c790ebded1"
-  integrity sha512-ZGycjKLslHvZNc9u5tl5dvvcNVUmJ42HJF2zCI0/jtXJ3gaU4A1msAOTXAQYyPkGGaQuqUyd8Ixvnu94LPalsw==
+"@emurgo/cardano-serialization-lib-browser@11.2.1":
+  version "11.2.1"
+  resolved "https://registry.yarnpkg.com/@emurgo/cardano-serialization-lib-browser/-/cardano-serialization-lib-browser-11.2.1.tgz#932996810da95b609e58966155e78e4d2a4f7e05"
+  integrity sha512-J9Pmeta7y1GYnMCxtb3GnGCRw6zk1wiQ8EdCYQRn/Yqa/ss1zoBjd41euVi02Eb58aLuOJS81nNU+BcMLGXvUg==
 
 "@emurgo/cardano-serialization-lib-nodejs@11.1.0":
   version "11.1.0"
   resolved "https://registry.yarnpkg.com/@emurgo/cardano-serialization-lib-nodejs/-/cardano-serialization-lib-nodejs-11.1.0.tgz#d75decb7a8447abceb15162cc6254f5b9171ae8c"
   integrity sha512-lcKuKmeMGLLu45DqT2HYugHujsu1/WYKfrPzycAMpRk4FhZ0wWY2IFkD6We8+CQwNpXyQquy0psmRD5tChIxMA==
 
-"@emurgo/cardano-serialization-lib-nodejs@11.3.0":
-  version "11.3.0"
-  resolved "https://registry.yarnpkg.com/@emurgo/cardano-serialization-lib-nodejs/-/cardano-serialization-lib-nodejs-11.3.0.tgz#f8896ba4dd4411c97503d99f8fbcd2ef23087646"
-  integrity sha512-F1WXfvTtOZkJf3mSA9yToJaLCpPNOqyK5IljigS8fHxrLjSDEqVGVmQNM2R0NQTNsQLKxcSPBf0I3gukgoHnbQ==
+"@emurgo/cardano-serialization-lib-nodejs@11.2.1":
+  version "11.2.1"
+  resolved "https://registry.yarnpkg.com/@emurgo/cardano-serialization-lib-nodejs/-/cardano-serialization-lib-nodejs-11.2.1.tgz#f642c0ae92cdf1822555d9ee7496dd21d41aa709"
+  integrity sha512-+Rw35NW4Qv/9uFaPxhKtxiIPmoBEIFMAgdqQxZTw6hNT/wvBp2TvwTBPnOW8ODs7GUAA8nrO1rJJAaxF+mAG2w==
 
 "@emurgo/cip14-js@3.0.1":
   version "3.0.1"
@@ -259,15 +259,15 @@
     nanoid "3.3.4"
     zod "3.19.1"
 
-"@meshsdk/core@^1.5.4":
-  version "1.5.4"
-  resolved "https://registry.yarnpkg.com/@meshsdk/core/-/core-1.5.4.tgz#a9dd77af7dcd97a844bf344033dde0d844809fa8"
-  integrity sha512-AdbaVU8WGHk/DAI9tRR79Ruq8G1oTumy54iTarjCeGITOjsobcoppCKSnzi4RKo/KNkMDFi56MRHv3Qq2P3jYA==
+"@meshsdk/core@1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@meshsdk/core/-/core-1.4.0.tgz#fd9eff7cf48661b86b93021eef2c15a5b7fa8f25"
+  integrity sha512-1dDOVq58SKPi9O2h+c59EWKkwPhn7nij0LX7+ybiZDE/QO8dPmmPra7qTmgxhraxk/w8yp8r1koPoa+1iN02EA==
   dependencies:
     "@emurgo/cardano-message-signing-browser" "1.0.1"
     "@emurgo/cardano-message-signing-nodejs" "1.0.1"
-    "@emurgo/cardano-serialization-lib-browser" "11.3.0"
-    "@emurgo/cardano-serialization-lib-nodejs" "11.3.0"
+    "@emurgo/cardano-serialization-lib-browser" "11.2.1"
+    "@emurgo/cardano-serialization-lib-nodejs" "11.2.1"
     "@emurgo/cip14-js" "3.0.1"
     axios "0.27.2"
     bip39 "3.0.4"
@@ -807,6 +807,13 @@ debug@4.x, debug@^4.1.0:
   dependencies:
     ms "2.1.2"
 
+debug@^2.6.6:
+  version "2.6.9"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
+  integrity sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==
+  dependencies:
+    ms "2.0.0"
+
 delayed-stream@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
@@ -831,6 +838,11 @@ exenv@^1.2.0:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/exenv/-/exenv-1.2.2.tgz#2ae78e85d9894158670b03d47bec1f03bd91bb9d"
   integrity sha512-Z+ktTxTwv9ILfgKCk32OX3n/doe+OcLTRtqK9pcL+JsP3J1/VW8Uvl4ZjLlKqeW4rzK4oesDOGMEMRIZqtP4Iw==
+
+fast-deep-equal@3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
+  integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
 
 fast-glob@^3.2.12:
   version "3.2.12"
@@ -1056,6 +1068,11 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.2.4.tgz#eca284f75d2965079309dc0ad9255abb2ebc1632"
   integrity sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==
 
+load-script@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/load-script/-/load-script-1.0.0.tgz#0491939e0bee5643ee494a7e3da3d2bac70c6ca4"
+  integrity sha512-kPEjMFtZvwL9TaZo0uZ2ml+Ye9HUMmPwbYRJ324qF9tqMejwykJ5ggTyvzmrbBeapCAbk98BSbTeovHEEP1uCA==
+
 lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
@@ -1174,6 +1191,11 @@ mquery@5.0.0:
   integrity sha512-iQMncpmEK8R8ncT8HJGsGc9Dsp8xcgYMVSbs5jgnm1lFHTZqMJTUWTDx1LBO8+mK3tPNZWFLBghQEIOULSTHZg==
   dependencies:
     debug "4.x"
+
+ms@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
+  integrity sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==
 
 ms@2.1.2:
   version "2.1.2"
@@ -1367,7 +1389,7 @@ postcss@^8.4.23:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-prop-types@^15.7.2:
+prop-types@15.8.1, prop-types@^15.7.2:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -1457,6 +1479,15 @@ react-redux@^8.0.5:
     hoist-non-react-statics "^3.3.2"
     react-is "^18.0.0"
     use-sync-external-store "^1.0.0"
+
+react-youtube@^10.1.0:
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/react-youtube/-/react-youtube-10.1.0.tgz#7e5670c764f12eb408166e8eb438d788dc64e8b5"
+  integrity sha512-ZfGtcVpk0SSZtWCSTYOQKhfx5/1cfyEW1JN/mugGNfAxT3rmVJeMbGpA9+e78yG21ls5nc/5uZJETE3cm3knBg==
+  dependencies:
+    fast-deep-equal "3.1.3"
+    prop-types "15.8.1"
+    youtube-player "5.5.2"
 
 react@18.1.0:
   version "18.1.0"
@@ -1596,6 +1627,11 @@ simple-swizzle@^0.2.2:
   integrity sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==
   dependencies:
     is-arrayish "^0.3.1"
+
+sister@^3.0.0:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/sister/-/sister-3.0.2.tgz#bb3e39f07b1f75bbe1945f29a27ff1e5a2f26be4"
+  integrity sha512-p19rtTs+NksBRKW9qn0UhZ8/TUI9BPw9lmtHny+Y3TinWlOa9jWh9xB0AtPSdmOy49NJJJSSe0Ey4C7h0TrcYA==
 
 smart-buffer@^4.2.0:
   version "4.2.0"
@@ -1803,6 +1839,15 @@ yaml@^2.1.1:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.2.2.tgz#ec551ef37326e6d42872dad1970300f8eb83a073"
   integrity sha512-CBKFWExMn46Foo4cldiChEzn7S7SRV+wqiluAb6xmueD/fGyRHIhX8m14vVGgeFWjN540nKCNVj6P21eQjgTuA==
+
+youtube-player@5.5.2:
+  version "5.5.2"
+  resolved "https://registry.yarnpkg.com/youtube-player/-/youtube-player-5.5.2.tgz#052b86b1eabe21ff331095ffffeae285fa7f7cb5"
+  integrity sha512-ZGtsemSpXnDky2AUYWgxjaopgB+shFHgXVpiJFeNB5nWEugpW1KWYDaHKuLqh2b67r24GtP6HoSW5swvf0fFIQ==
+  dependencies:
+    debug "^2.6.6"
+    load-script "^1.0.0"
+    sister "^3.0.0"
 
 zod@3.19.1:
   version "3.19.1"

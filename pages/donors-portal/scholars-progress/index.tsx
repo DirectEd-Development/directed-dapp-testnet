@@ -1,5 +1,15 @@
 import { DonorLayout, StudentMilestone } from '../../../components'
+import { GetServerSideProps } from 'next';
 
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+	// Redirect all users unconditionally
+	return {
+		redirect: {
+			destination: '/', // Redirect to DirectEd Homepage
+			permanent: false,
+		},
+	};
+};
 const ScholarProgress = () => {
 	return (
 		<DonorLayout>
