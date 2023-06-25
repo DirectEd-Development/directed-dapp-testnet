@@ -1,8 +1,9 @@
 import { GetStaticProps, NextPage } from 'next'
-import { Button, SchoolCard, DonorLayout } from '../../components'
+import { Button, SchoolCard, DonorLayout, Layout } from '../../components'
 import { RiErrorWarningLine } from 'react-icons/ri'
 import { useWallet, useAssets } from '@meshsdk/react'
 import { useEffect, useState } from 'react'
+
 
 const POLICY_IDS = [
 	'ee78bdfeeb58deb674a11c5a9ea2514087933ff0a01f3bf6f1517fc0',
@@ -39,7 +40,9 @@ const Progress: NextPage = ({ schools }: any) => {
 	return (
 		<>
 			<main className='progress'>
-				{hasPolicyIdAssetsChecked ? (
+				{
+				hasPolicyIdAssetsChecked 
+				? (
 					<DonorLayout>
 						<div className='progress__header'>
 							<h2>Progress of the DirectEd Bootcamp Scholars 2023</h2>
@@ -59,13 +62,13 @@ const Progress: NextPage = ({ schools }: any) => {
 						</div>
 					</DonorLayout>
 				) : (
-					<>
+					<DonorLayout>
 						<h3>You need to hold a DirectEd Lions NFT to access this page</h3>
 						<h4>
 							You get a DirectEd Lions NFT when you donate to a pool
 							<a href='https://app.directed.dev/scholarship-pool'> here. </a>
 						</h4>
-					</>
+					</DonorLayout>
 				)}
 			</main>
 		</>
