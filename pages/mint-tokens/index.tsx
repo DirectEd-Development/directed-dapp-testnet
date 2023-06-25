@@ -25,7 +25,7 @@ const minttokens: NextPage = () => {
                     },
                     [
                         {
-                            unit: "22f20d5382cec46166b566821f16f79cb03ee1520c71e5f83a4b3f2054657374746f6b656e",
+                            unit: "a1deebd26b685e6799218f60e2cad0a80928c4145d12f1bf49aebab554657374546f6b656e",
                             quantity: "1",
                         },
                     ],
@@ -34,6 +34,25 @@ const minttokens: NextPage = () => {
             const signedTx = await wallet.signTx(unsignedTx);
             const txHash = await wallet.submitTx(signedTx);
         }
+    };
+
+    async function _getAssetUtxo({ scriptAddress, asset, datum }: {
+        scriptAddress: string,
+        asset: string,
+        datum: any
+    }) {
+        const blockfrostProvider = new BlockfrostProvider(
+            '<blockfrostApiKey>',
+        );
+        const utxos = await blockfrostProvider.fetchAddressUTxOs(
+            scriptAddress,
+            asset
+        );
+        const dataHash = resolveDataHash(datum);
+        let utxo = utxos.find((utxo: any) => {
+            return utxo.output.dataHash == dataHash;
+        });
+        return utxo;
     };
 
     return (
