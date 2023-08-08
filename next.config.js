@@ -7,6 +7,7 @@ module.exports = {
 	  config.experiments = {
 		asyncWebAssembly: true,
 		layers: true,
+		topLevelAwait: true,
 	  };
   
 	  if (!dev && isServer) {

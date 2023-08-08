@@ -1157,10 +1157,10 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
-lucid-cardano@^0.10.6:
-  version "0.10.6"
-  resolved "https://registry.yarnpkg.com/lucid-cardano/-/lucid-cardano-0.10.6.tgz#924b2d8d1f91c2ad7f2cbf8f01f66169afab6393"
-  integrity sha512-thZRR3YOHFvuSthwv5yd6C+kNXFhY50b8x5K0oaBLF9Wj7qOzBOhdV9Hoy3DvEAgFVscYCIjKo5gZ3NQZBn93A==
+lucid-cardano@^0.10.7:
+  version "0.10.7"
+  resolved "https://registry.yarnpkg.com/lucid-cardano/-/lucid-cardano-0.10.7.tgz#31faf461e9199ae8521e017dd21408b759b43a82"
+  integrity sha512-hxJRMWj8VH+SGFqsVMG6T3LSRuxzwFbWOQ5DTGQQUyR/20FL7bjiVL+2ivMJF52tAbFKcwqpRD4fddR7LbqcAw==
   dependencies:
     "@peculiar/webcrypto" "^1.4.0"
     node-fetch "^3.2.3"

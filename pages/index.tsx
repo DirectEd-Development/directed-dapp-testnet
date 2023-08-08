@@ -18,7 +18,7 @@ const Home: NextPage = () => {
 			<Link href="/redeem">
 			  <Button variant="accent">Tutors Marketplace SC</Button>
 			</Link>
-			<Link href="/mint-tokens">
+			<Link href="/milestone-sc">
 			  <Button variant="accent" size="small">
 				Crowdfunding-Milestones SC
 			  </Button>
