@@ -2,7 +2,7 @@ import { Button, Layout } from '../../components';
 import { NextPage } from "next";
 import Link from 'next/link';
 import * as L from "lucid-cardano";
-import { secretSeed } from './seed';
+import { secretSeed } from '../api/seed';
 import { useState, useEffect } from "react";
 
 const Milestone = () => {

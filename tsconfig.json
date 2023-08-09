@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/milestone-sc/index.js", "pages/milestone-sc/index.js", "pages/milestone-sc/seed.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/milestone-sc/index.jsx", "pages/milestone-sc/index.jsx", "pages/milestone-sc/seed.jsx"],
   "exclude": ["node_modules"]
 }
