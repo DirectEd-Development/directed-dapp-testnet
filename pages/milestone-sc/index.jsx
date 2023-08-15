@@ -117,7 +117,7 @@ const Milestone = () => {
 
   // mint and send acceptance token
   const mintAcceptanceToken = async (details) => {
-    console.log("details:",details)
+    console.log("details:", details)
 
     const PKH = details.paymentCredential.hash;
     const address = details.address.bech32;
@@ -401,100 +401,112 @@ const Milestone = () => {
 
   }
 
+  const mintAcceptance = async () => {
+    try {
+      // Mint and send Acceptance token
+      lucid.selectWalletFromSeed(secretSeed, { accountIndex: 0 });
+      const tx = await mintAcceptanceToken(details4);
 
-  const [testCase, setTestCase] = useState("")
-
-  const handleLucid = async () => {
-    console.log("Test case:", testCase);
-    lucid.selectWalletFromSeed(secretSeed, { accountIndex: 0 });
-    const tx = await mintAcceptanceToken(details4);
-    
-    switch (testCase) {
-      case "mint":
-    // Mint and send student token
-    lucid.selectWalletFromSeed(secretSeed, { accountIndex: 1 });
-    console.log(await mintStudentToken(details4));
-      break;
-      
-      case "donate":
-    // Donate 200 Ada to PoolScript
-    lucid.selectWalletFromSeed(secretSeed, { accountIndex: 3})
-    console.log(await donateToPool(200000000n))
-      break;
-      case "init":
-    // Initialize Scholarship Using Pool Funds
-    lucid.selectWalletFromSeed(secretSeed, { accountIndex: 4})
-    console.log(await initialiseOwnScholarship())
-      break;
-    case "mintAndSend":
-    // Mint and send milestone token
-    lucid.selectWalletFromSeed(secretSeed, { accountIndex: 2 });
-    console.log(await mintMilestoneToken(details4));
-      break;
-    case "complete":
-    // Complete Milestone 1 and withdraw funding
-    lucid.selectWalletFromSeed(secretSeed, { accountIndex: 4})
-    console.log(await completeMilestone(1n))
-      break;
-    case "scholRefund":
-    // Mint and send milestone token
-    lucid.selectWalletFromSeed(secretSeed, { accountIndex: 2 });
-    console.log(await mintMilestoneToken(details4));
-    break;
-    case "poolRefund":
-    // Complete Milestone 2 and withdraw funding
-    lucid.selectWalletFromSeed(secretSeed, { accountIndex: 4})
-    console.log(await completeMilestone(2n))
-    break;
-    case "deadlinePassedScholRefund":
-
-    // Authority Refund from school script after deadline passed
-    lucid.selectWalletFromSeed(secretSeed, { accountIndex: 0})
-    console.log(await deadlinePassedScholRefund())
-    break;
-    case "deadlinePassedPoolRefund":
-    // Authority Refund from pool script after deadline passed
-    lucid.selectWalletFromSeed(secretSeed, { accountIndex: 0})
-    console.log(await deadlinePassedPoolRefund())
-    break;
-    case "":
-      console.log("Please select a test case")
-      break;
-    default:
-      break;
+      console.log(tx);
+    } catch (error) {
+      console.error('Error minting acceptance:', error);
     }
-    
-    console.log(tx)
-  }
+  };
+
+  const mintStudent = async () => {
+    try {
+      // Mint and send student token
+      lucid.selectWalletFromSeed(secretSeed, { accountIndex: 1 });
+      const tx = await mintStudentToken(details4);
+
+      console.log(tx);
+    } catch (error) {
+      console.error('Error minting student token:', error);
+    }
+  };
+
+  const donateAda = async () => {
+    try {
+      // Donate 200 Ada to PoolScript
+      lucid.selectWalletFromSeed(secretSeed, { accountIndex: 3 });
+      const tx = await donateToPool(200000000n);
+
+      console.log(tx);
+    } catch (error) {
+      console.error('Error donating Ada:', error);
+    }
+  };
+
+  const initializeScholarship = async () => {
+    try {
+      lucid.selectWalletFromSeed(secretSeed, { accountIndex: 4 });
+      console.log(await initialiseOwnScholarship());
+    } catch (error) {
+      console.error('Error initializing scholarship:', error);
+    }
+  };
+
+  const mintMilestone = async () => {
+    try {
+      lucid.selectWalletFromSeed(secretSeed, { accountIndex: 2 });
+      console.log(await mintMilestoneToken(details4));
+    } catch (error) {
+      console.error('Error minting milestone token:', error);
+    }
+  };
+
+  const completeMilestone1 = async () => {
+    try {
+      lucid.selectWalletFromSeed(secretSeed, { accountIndex: 4 });
+      console.log(await completeMilestone(1n));
+    } catch (error) {
+      console.error('Error completing milestone 1:', error);
+    }
+  };
+
+  const completeMilestone2 = async () => {
+    try {
+      lucid.selectWalletFromSeed(secretSeed, { accountIndex: 4 });
+      console.log(await completeMilestone(2n));
+    } catch (error) {
+      console.error('Error completing milestone 2:', error);
+    }
+  };
+
+  const refundScholAfterDeadline = async () => {
+    try {
+      lucid.selectWalletFromSeed(secretSeed, { accountIndex: 0 });
+      console.log(await deadlinePassedScholRefund());
+    } catch (error) {
+      console.error('Error refunding after deadline (schol):', error);
+    }
+  };
+
+  const refundPoolAfterDeadline = async () => {
+    try {
+      lucid.selectWalletFromSeed(secretSeed, { accountIndex: 0 });
+      console.log(await deadlinePassedPoolRefund());
+    } catch (error) {
+      console.error('Error refunding after deadline (pool):', error);
+    }
+  };
 
   return (
     <Layout>
       <div className='crowdfunding-page'>
         <h1>Crowdfunding-Milestones Page</h1>
-        <p>This page is currently under construction. It will be fully available soon.</p>
-        <select
-        style={{
-          width: '50%',  
-          padding: '1rem',
-          fontSize: '1rem',
-          border: '1px solid #ccc',
-          borderRadius: '4px',
-          boxSizing: 'border-box',
-          marginBottom: '1rem',
-
-       }}
-         onChange={(e) => setTestCase(e.target.value)}>
-          <option value="">Select a test case</option>
-          <option value="mint">Mint and send student token</option>
-          <option value="donate">Donate 200 Ada to PoolScript</option>
-          <option value="init">Initialize Scholarship Using Pool Funds</option>
-          <option value="mintAndSend">Mint and send milestone token</option>
-          <option value="complete">Complete Milestone 1 and withdraw funding</option>
-          <option value="scholRefund">Authority Refund from school script after deadline passed</option>
-          <option value="poolRefund">Authority Refund from pool script after deadline passed</option>
-        </select>
+        <p>This page is for preview testnet for the directEd smart contract</p>
         <br />
-          <Button onClick={handleLucid}>Test Contract</Button>
+        <Button onClick={mintAcceptance}>Mint Acceptance Token</Button>
+        <Button onClick={mintStudent}>Mint Student Token</Button>
+        <Button onClick={donateAda}>Donate 200ADA</Button>
+        <Button onClick={initializeScholarship}>Initialize Scholarship</Button>
+        <Button onClick={mintMilestone}>Mint Milestone Token</Button>
+        <Button onClick={completeMilestone1}>Complete Milestone 1</Button>
+        <Button onClick={mintMilestone}>Mint Milestone Token</Button>
+        <Button onClick={completeMilestone2}>Complete Milestone 2</Button>
+        <Button onClick={refundScholAfterDeadline}>Refund Schol After Deadline</Button>
+        <Button onClick={refundPoolAfterDeadline}>Refund Pool After Deadline</Button>
       </div>
     </Layout>
   );

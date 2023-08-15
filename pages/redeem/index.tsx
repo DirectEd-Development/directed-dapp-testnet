@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useWallet, useWalletList } from '@meshsdk/react'
-
 import { Button, Layout } from '../../components';
 import type { NextPage } from "next";
 
