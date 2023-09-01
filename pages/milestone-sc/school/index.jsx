@@ -28,7 +28,7 @@ const school = () => {
       />
       <div className="school-page">
         <h1>Welcome, School!</h1>
-        <p>Mint tokens by entering the address  below:</p>
+        <p>Mint the required tokens by entering the School address  below:</p>
         <input
           type="text"
           placeholder="Enter school address"

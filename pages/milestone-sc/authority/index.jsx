@@ -28,7 +28,7 @@ const authority = () => {
       />
       <div className="authority-page">
         <h1>Welcome, Authority!</h1>
-        <p>Mint tokens by entering the address below below:</p>
+        <p>Mint the required tokens by entering the Authority address below:</p>
         <input
           type="text"
           placeholder="Enter authority address"

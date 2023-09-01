@@ -27,8 +27,8 @@ const examiner = () => {
         description="Welcome, Examiner! Enter the Examiner address below to mint the required token."
       />
       <div className="school-page">
-        <h1>Welcome, School!</h1>
-        <p>Mint tokens by entering the address  below:</p>
+        <h1>Welcome, Examiner!</h1>
+        <p>Mint the required tokens by entering the Examiner address  below:</p>
         <input
           type="text"
           placeholder="Enter school address"
