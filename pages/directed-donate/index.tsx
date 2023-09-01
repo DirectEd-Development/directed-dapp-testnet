@@ -4,9 +4,7 @@ import { useRouter } from 'next/router'
 import { FaChevronLeft } from 'react-icons/fa'
 import { Button, Meta, Modal } from '../../components'
 import { useWallet} from '@meshsdk/react'
-
 import Survey from '../../components/Survey/Survey'
-
 import { Transaction } from '@meshsdk/core'
 import { ModalHandler} from '../../components/Modal/Modal'
 import {Layout} from '../../components'
@@ -169,10 +167,6 @@ const directeddonate: NextPage = () => {
 					</div>
 				</div>
 
-	
-
-
-
 				<div>
 				<h6>Looking for the DirectEd Lions? Head over
 					<a href="https://app.directed.dev/scholarship-pool"> here</a>
@@ -184,9 +178,6 @@ const directeddonate: NextPage = () => {
 				</h6>
 
 				</div>
-
-
-		
 
 			</main>
 
@@ -244,8 +235,6 @@ const directeddonate: NextPage = () => {
 									CLOSE
 								</Button>
 								</div>
-							
-
 						</div>
 					</Modal>
 					<Modal
