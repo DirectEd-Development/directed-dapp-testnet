@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import PopupModal from '../../components/PopupModal/PopupModal'
 
+// Restrict Access to this page //
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
 	// Redirect all users unconditionally
 	return {

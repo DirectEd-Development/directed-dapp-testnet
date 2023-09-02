@@ -34,6 +34,7 @@ const Home = () => {
           <option value="authority">Authority</option> 
           <option value="examiner">Examiner</option>
           <option value="school">School</option>
+          <option value="student">Student</option>
         </select>
         <div className="home__buttons">
           <Button variant="primary" onClick={handleProceed} disabled={!selectedOption}>
