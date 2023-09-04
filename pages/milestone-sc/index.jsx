@@ -18,7 +18,10 @@ const Home = () => {
       router.push('/milestone-sc/examiner');
     } else if (selectedOption === 'school') {
       router.push('/milestone-sc/school');
+    } else if (selectedOption === 'student'){
+      router.push('/milestone-sc/student');
     }
+      
   };
 
   return (
