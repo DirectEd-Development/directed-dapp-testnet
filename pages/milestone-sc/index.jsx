@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { Button, Layout, Meta } from '../../components';
 
-const Home = () => {
+const Milestone = () => {
   const router = useRouter();
   const [selectedOption, setSelectedOption] = useState('');
 
@@ -27,10 +27,10 @@ const Home = () => {
   return (
     <Layout>
       <Meta
-        title="DirectEd Testnet"
+        title="DirectEd | Milestone S-Contract"
         description="For a world in which any person can realize their full potential, regardless of their draw in the lottery of life."
       />
-      <div className="home">
+      <div className="milestone">
         <h1>Pick a Role to Proceed</h1>
         <select onChange={handleOptionChange} value={selectedOption}>
           <option value="">Select an option</option>
@@ -39,7 +39,7 @@ const Home = () => {
           <option value="school">School</option>
           <option value="student">Student</option>
         </select>
-        <div className="home__buttons">
+        <div className="milestone__buttons">
           <Button variant="primary" onClick={handleProceed} disabled={!selectedOption}>
             Proceed
           </Button>
@@ -49,4 +49,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Milestone;

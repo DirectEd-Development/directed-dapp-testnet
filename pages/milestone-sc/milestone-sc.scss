@@ -1,39 +1,36 @@
+select {
+  font-size: 1.2rem;
+  color: #555;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
 
-
-  select {
+  option {
     font-size: 1.2rem;
     color: #555;
-    padding: 0.5rem;
-    width: 100%;
-    max-width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 1rem;
+  }
+}
 
-    option {
-      font-size: 1.2rem;
-      color: #555;
-    }
+
+
+.milestone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
   }
 
- 
-
-  .home {
+  &__buttons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 2rem;
-    }
-  
-    &__buttons {
-      display: flex;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
+    gap: 1rem;
+    margin-top: 2rem;
   }
-  
+}
