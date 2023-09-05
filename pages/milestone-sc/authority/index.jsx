@@ -42,7 +42,7 @@ const authority = () => {
         <p>Mint the required tokens by entering the Authority address below:</p>
         <input
           type="text"
-          placeholder="Enter authority address"
+          placeholder="Enter student address"
           value={address}
           onChange={handleWalletAddress}
         />

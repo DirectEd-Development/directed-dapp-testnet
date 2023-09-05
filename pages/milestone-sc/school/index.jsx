@@ -42,7 +42,7 @@ const school = () => {
         <p>Mint the required tokens by entering the School address  below:</p>
         <input
           type="text"
-          placeholder="Enter school address"
+          placeholder="Enter student address"
           value={address}
           onChange={handleWalletAddress}
         />
