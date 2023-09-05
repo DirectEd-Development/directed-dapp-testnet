@@ -1,23 +1,34 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import * as L from "lucid-cardano";
 import { Button, Layout, Meta } from '../../../components';
+import { checkAuthorityCredentials } from '../lucid/pkh';
+import { mintMilestoneToken } from '../lucid/functions';
+
 
 const authority = () => {
   const router = useRouter();
-  const [tokenAmount, setTokenAmount] = useState('');
+  const [address, setAddress] = useState("");
 
-  const handleTokenAmountChange = (event) => {
-    setTokenAmount(event.target.value);
+  const handleWalletAddress = (event) => {
+    setAddress(event.target.value);
   };
 
-  const handleMintTokens = () => {
-    // Perform the token minting logic here
-    // You can use the `tokenAmount` state to determine the amount to mint
-    // You can also add validation and other logic as needed
-    console.log(`Minting ${tokenAmount} tokens`);
-
-    // Redirect to another page after minting (e.g., a success page)
-    router.push('/mint-success');
+  const handleLucid = async () => {
+    console.log(`User ${address} tokens`);
+    const lucid = await L.Lucid.new();
+    const api = await window.cardano.eternl.enable();
+    lucid.selectWallet(api);
+    const authaddress = await lucid.wallet.address();
+    const details = await lucid.utils.getAddressDetails(authaddress);
+    const pkh = details.paymentCredential.hash;
+    const isTrue = checkAuthorityCredentials(pkh)
+    if(isTrue) {
+      const tx = await mintMilestoneToken(address);
+      console.log(tx)
+    }
+     // Redirect to another page after minting (e.g., a success page)
+    // router.push('/mint-success');
   };
 
   return (
@@ -32,11 +43,11 @@ const authority = () => {
         <input
           type="text"
           placeholder="Enter authority address"
-          value={tokenAmount}
-          onChange={handleTokenAmountChange}
+          value={address}
+          onChange={handleWalletAddress}
         />
         <div className="authority-page__buttons">
-          <Button variant="primary" onClick={handleMintTokens} disabled={!tokenAmount}>
+          <Button variant="primary" onClick={handleLucid} disabled={!address}>
             Mint Tokens
           </Button>
         </div>
