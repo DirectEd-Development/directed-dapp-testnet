@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import * as L from "lucid-cardano";
 import { Button, Layout, Meta } from '../../../components';
-import { checkAuthorityCredentials } from '../lucid/pkh';
-import { mintMilestoneToken } from '../lucid/functions';
+import { checkAuthorityCredentials } from '../../api/lucid/pkh';
+import { mintMilestoneToken } from '../../api/lucid/functions';
 
 
 const authority = () => {

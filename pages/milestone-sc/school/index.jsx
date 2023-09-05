@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import * as L from "lucid-cardano";
 import { Button, Layout, Meta } from '../../../components';
-import { checkSchoolCredentials } from '../lucid/pkh';
-import { mintStudentToken } from '../lucid/functions';
+import { checkSchoolCredentials } from '../../api/lucid/pkh';
+import { mintStudentToken } from '../../api/lucid/functions';
 
 
 const school = () => {

@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import * as L from "lucid-cardano";
 import { Button, Layout, Meta } from '../../../components';
-import { checkTutorCredentials } from '../lucid/pkh';
-import { mintAcceptanceToken } from '../lucid/functions';
+import { checkTutorCredentials } from '../../api/lucid/pkh';
+import { mintAcceptanceToken } from '../../api/lucid/functions';
 
 const examiner = () => {
   const router = useRouter();
