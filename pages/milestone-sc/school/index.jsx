@@ -7,7 +7,7 @@ import { mintStudentToken } from '../../api/lucid/functions';
 
 
 const school = () => {
-  const router = useRouter();
+  // const router = useRouter();
   const [address, setAddress] = useState("");
 
   const handleWalletAddress = (event) => {
@@ -16,16 +16,19 @@ const school = () => {
 
   const handleLucid = async () => {
     console.log(`User ${address} tokens`);
+    
     const lucid = await L.Lucid.new();
     const api = await window.cardano.eternl.enable();
     lucid.selectWallet(api);
     const authaddress = await lucid.wallet.address();
     const details = await lucid.utils.getAddressDetails(authaddress);
     const pkh = details.paymentCredential.hash;
+    console.log(details)
     const isTrue = checkSchoolCredentials(pkh);
     if(isTrue) {
       const tx = await mintStudentToken(address);
       console.log(tx)
+      console.log(address)
     }
     // Redirect to another page after minting (e.g., a success page)
     // router.push('/mint-success');
