@@ -13,13 +13,13 @@ const edmundDetails = L.getAddressDetails(edmundAddr);
 const edmundPKH = edmundDetails.paymentCredential.hash;
 
 export const checkTutorCredentials = (pkh) => {
-    return pkh === edmundPKH;
+    return pkh === kidusPKH;
 }
 
 export const checkSchoolCredentials = (pkh) => {
-    return pkh === simonPKH;
+    return pkh === edmundPKH;
 }
 
 export const checkAuthorityCredentials = (pkh) => {
-    return pkh === kidusPKH;
+    return pkh === simonPKH;
 }
