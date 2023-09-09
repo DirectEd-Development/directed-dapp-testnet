@@ -22,6 +22,7 @@ const examiner = () => {
     const details = await lucid.utils.getAddressDetails(authaddress);
     const pkh = details.paymentCredential.hash;
     const isTrue = checkTutorCredentials(pkh);
+    console.log(isTrue)
     if (isTrue) {
       const tx = await mintAcceptanceToken(address)
       console.log(tx)

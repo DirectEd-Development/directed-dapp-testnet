@@ -25,6 +25,7 @@ const school = () => {
     const pkh = details.paymentCredential.hash;
     console.log(details)
     const isTrue = checkSchoolCredentials(pkh);
+    console.log(isTrue)
     if(isTrue) {
       const tx = await mintStudentToken(address);
       console.log(tx)

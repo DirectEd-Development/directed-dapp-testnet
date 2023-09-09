@@ -7,7 +7,7 @@ import { mintMilestoneToken } from '../../api/lucid/functions';
 
 
 const authority = () => {
-  const router = useRouter();
+  // const router = useRouter();
   const [address, setAddress] = useState("");
 
   const handleWalletAddress = (event) => {
