@@ -1,5 +1,5 @@
 import * as L from "lucid-cardano";
-import { secretSeed } from "./seed"
+import { secretSeed } from "../seed"
 
   let addr0;
   let addr1;
