@@ -57,8 +57,8 @@ const directeddonate: NextPage = () => {
 		if (connected) {
 			setLoading(true)
 			const network = await wallet.getNetworkId()
-			if (network == 0) {
-				setErrorMessage('This dapp only works on Cardano Mainnet.')
+			if (network == 1) {
+				setErrorMessage('This dapp only works on Cardano Testnet.')
 				errorRef.current?.openModal()
 				setConfirm(false) // reset confirm state after donation is sent
 				setProcessing(false)
