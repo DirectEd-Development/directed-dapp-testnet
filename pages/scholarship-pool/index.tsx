@@ -5,16 +5,16 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import PopupModal from '../../components/PopupModal/PopupModal'
 
-// Restrict Access to this page //
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-	// Redirect all users unconditionally
-	return {
-		redirect: {
-			destination: '/', // Redirect to DirectEd Homepage
-			permanent: false,
-		},
-	};
-};
+// // Restrict Access to this page //
+// export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+// 	// Redirect all users unconditionally
+// 	return {
+// 		redirect: {
+// 			destination: 'true', // Redirect to DirectEd Homepage
+// 			permanent: false,
+// 		},
+// 	};
+// };
 
 interface TransactionCount {
 	tx_hash: string
@@ -185,6 +185,7 @@ const ScholarshipPool: NextPage = () => {
 						/>
 					</div>
 				</section>
+				
 				{/* <FilterMenu />
 				<section className='scholarship-pool__landscape-card'>
 					{schoolData.map((school: SchoolDataType) => (
