@@ -1,35 +1,4 @@
 export const data = [
-	// Data for Kagumo High
-	{
-		title: 'Jumbo Kylwo',
-		image: '/static/images/Directed Heros/Kagumo-Heros/Jumbo-Kylwo.png',
-		url: '',
-		school: 'kagumo',
-	},
-	{
-		title: 'Sahara Mathi',
-		image: '/static/images/Directed Heros/Kagumo-Heros/Sahara-Mathi.png',
-		url: '',
-		school: 'kagumo',
-	},
-	{
-		title: 'Shishu Darlido',
-		image: '/static/images/Directed Heros/Kagumo-Heros/Shishu-Darlido.png',
-		url: '',
-		school: 'kagumo',
-	},
-	{
-		title: 'Tanya Naigu',
-		image: '/static/images/Directed Heros/Kagumo-Heros/Tanya-Naigu.png',
-		url: '',
-		school: 'kagumo',
-	},
-	{
-		title: 'Zimba Kalrak',
-		image: '/static/images/Directed Heros/Kagumo-Heros/Zimba-Kalrak.png',
-		url: '',
-		school: 'kagumo',
-	},
 
 	// Data for Mang'u High
 	{
