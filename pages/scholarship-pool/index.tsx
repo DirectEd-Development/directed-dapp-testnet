@@ -1,20 +1,8 @@
 import type { NextPage } from 'next'
-import { GetServerSideProps } from 'next';
 import { Meta, DonorInfoTab, ScholarsCard, Layout } from '../../components'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import PopupModal from '../../components/PopupModal/PopupModal'
-
-// // Restrict Access to this page //
-// export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-// 	// Redirect all users unconditionally
-// 	return {
-// 		redirect: {
-// 			destination: 'true', // Redirect to DirectEd Homepage
-// 			permanent: false,
-// 		},
-// 	};
-// };
 
 interface TransactionCount {
 	tx_hash: string

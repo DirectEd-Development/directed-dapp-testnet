@@ -6,17 +6,17 @@ import {VscFeedback} from 'react-icons/vsc'
 import Survey from '../../../components/Survey/Survey'
 import {DonorLayout} from '../../../components'
 import { ModalHandler} from '../../../components/Modal/Modal'
-import { GetServerSideProps } from 'next';
+// import { GetServerSideProps } from 'next';
 
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-	// Redirect all users unconditionally
-	return {
-		redirect: {
-			destination: '/', // Redirect to DirectEd Homepage
-			permanent: false,
-		},
-	};
-};
+// export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+// 	// Redirect all users unconditionally
+// 	return {
+// 		redirect: {
+// 			destination: '/', // Redirect to DirectEd Homepage
+// 			permanent: false,
+// 		},
+// 	};
+// };
 
 const POLICY_IDS = [
 	'ee78bdfeeb58deb674a11c5a9ea2514087933ff0a01f3bf6f1517fc0',
