@@ -118,18 +118,6 @@ const ScholarshipPool: NextPage = () => {
 							stakeAdd='stake179dedwdltct8y0cfak5x54aemazeay6lxfscee8qeer7esqfswem9'
 							nftsleft='1'
 						/>
-						<ScholarsCard
-							donated={wallet1.length}
-							funded='6'
-							fundsLeft='12'
-							schoolName="Ngong Road Children's Foundation"
-							schoolAlias="Ngong Road Children's Foundation"
-							infoLink='https://directed.notion.site/Ngong-Road-Children-s-Foundation-d206b373d6f146e5b7ed841ee8b5232f'
-							image='/static/images/ngong.jpg'
-							donateLink='/Ngong'
-							stakeAdd='stake179dedwdltct8y0cfak5x54aemazeay6lxfscee8qeer7esqfswem9'
-							nftsleft='6'
-						/>
 					</div>
 				</section>
 				<section className='home__brands'>
