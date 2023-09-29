@@ -1,18 +1,14 @@
 [
     {
         "id":"0",
-        "name":"Kagumo High"
+        "name":"General Pool"
     },
     {
         "id":"1",
-        "name":"Mary Hill"
+        "name":"Girls Pool"
     },
     {
         "id":"2",
-        "name":"Mangu High"
-    },
-    {
-        "id":"3",
-        "name":"Ngong High"
+        "name":"Boys Pool"
     }
 ]

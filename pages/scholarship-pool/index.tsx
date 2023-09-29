@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { Meta, DonorInfoTab, ScholarsCard, Layout } from '../../components'
+import { Meta, DonorInfoTab, ScholarsCard, Layout, Timer } from '../../components'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import PopupModal from '../../components/PopupModal/PopupModal'
@@ -98,7 +98,7 @@ const ScholarshipPool: NextPage = () => {
 							donated={wallet2.length}
 							funded='3'
 							fundsLeft='6'
-							schoolName="Girls Pool"
+							schoolName="Boys Pool"
 							schoolAlias="Mang'u High"
 							infoLink='https://directed.notion.site/Mang-u-High-30fe2b6847864743b579dfd38f0d4f46'
 							image='/static/images/mangu.jpg'
@@ -110,7 +110,7 @@ const ScholarshipPool: NextPage = () => {
 							donated={wallet1.length}
 							funded='2'
 							fundsLeft='2'
-							schoolName="Boys Pool"
+							schoolName="Girls Pool"
 							schoolAlias="MaryHill Girl's High"
 							infoLink='https://directed.notion.site/Maryhill-Girl-s-High-School-ef8ca3c4c9d94935bb882a18799b2485'
 							image='/static/images/mary-hill.jpg'
@@ -160,6 +160,7 @@ const ScholarshipPool: NextPage = () => {
 							height={80}
 						/>
 					</div>
+					
 				</section>
 				
 				{/* <FilterMenu />

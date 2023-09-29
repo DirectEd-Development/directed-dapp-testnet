@@ -9,10 +9,10 @@ import { OptionTiers } from '../../types/tiers'
 import Timer from '../../components/Timer/Timer'
 import { setClose, setOpen } from '../../hooks/redux/closeTier'
 
-const Kagumo: NextPage = () => {
+const Pools: NextPage = () => {
     const school={
         "id":"0",
-        "name":"kagumo"
+        "name":"GeneralPool"
     }
 	const [tier, setTier] = useState<OptionTiers | null>(null)
 	const [isCustom, setIsCustom] = useState(false)
@@ -142,4 +142,4 @@ const Kagumo: NextPage = () => {
 	)
 }
 
-export default Kagumo
+export default Pools
