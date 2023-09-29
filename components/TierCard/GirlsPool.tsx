@@ -11,7 +11,7 @@ import { Transaction } from '@meshsdk/core'
 import React from 'react'
 import axios from 'axios'
 
-type NgongCardProps = {
+type GirlsPoolProps = {
 	onClick?(event?: React.MouseEvent): void
 	title: string
 	amount: string
@@ -22,13 +22,13 @@ type NgongCardProps = {
 const donationAddress =
 	'addr1x8c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5lu8sl0pkrzfm5t6qexkm8mxz5mrspm9rdhlh9shm7u0dflcqjcd9va'
 
-const NgongCard = ({
+const GirlsPool = ({
 	onClick,
 	title,
 	amount,
 	image,
 	school,
-}: NgongCardProps) => {
+}: GirlsPoolProps) => {
 	const [amountSent, setAmountSent] = useState('')
 	const [confirm, setConfirm] = useState(false)
 	const { wallet, connect, disconnect, connecting, connected } = useWallet()
@@ -198,7 +198,7 @@ const NgongCard = ({
 						</ul>
 						<Link
 							target='_blank'
-							href='https://pay.nmkr.io/?p=2c4da26b40ea44b9bb876e6d36bd73f3&c=1'
+							href='https://pay.nmkr.io/?p=a151e45d5b5b4ac1a7fc7a8983338992&c=1'
 						>
 							<Button variant='primary'>Confirm Option</Button>
 						</Link>
@@ -294,4 +294,4 @@ const NgongCard = ({
 	)
 }
 
-export default NgongCard
+export default GirlsPool
