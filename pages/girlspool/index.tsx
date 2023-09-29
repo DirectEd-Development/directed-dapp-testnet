@@ -2,14 +2,15 @@ import { useState } from 'react'
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { FaChevronLeft } from 'react-icons/fa'
-import { Button, CustomAmountInput, MaryHills, Meta, Layout, TierCard } from '../../components'
+import GirlsCard from '../../components/TierCard/GirlsCard'
+import { Button, CustomAmountInput, Meta, Layout, TierCard } from '../../components'
 import { lionOptions, noLionOptions } from '../../lib/donorAmounts'
 import { useDispatch } from 'react-redux'
 import { OptionTiers } from '../../types/tiers'
 import Timer from '../../components/Timer/Timer';
 import { setClose, setOpen } from '../../hooks/redux/closeTier'
 
-const MaryHill: NextPage = () => {
+const GirlsPool: NextPage = () => {
 	const [tier, setTier] = useState<OptionTiers | null>(null);
 	const [isCustom, setIsCustom] = useState(false);
 	const [custom, setCustom] = useState("");
@@ -22,7 +23,7 @@ const MaryHill: NextPage = () => {
 			title: option.title,
 			amount: option.amount,
 			image: option.image,
-			school: "Maryhill",
+			school: "GirlsPool",
 		});
 		dispatch(setClose())
 	}
@@ -33,7 +34,7 @@ const MaryHill: NextPage = () => {
 			title: "Custom",
 			amount: custom,
 			image: "",
-			school: "Maryhill"
+			school: "GirlsPool"
 		});
 		dispatch(setOpen())
 	}
@@ -46,7 +47,7 @@ const MaryHill: NextPage = () => {
 				title: option.title,
 				amount: option.amount,
 				image: option.image,
-				school: "Maryhill",
+				school: "GirlsPool",
 			});
 			dispatch(setOpen())
 		 }
@@ -68,7 +69,7 @@ const MaryHill: NextPage = () => {
 							/>
 						</div>
 						<div>
-							<h3>Donate to MaryHill Girl's High School</h3>
+							<h3>Donate to DirectED Girls Pool</h3>
 							<h4>DirectEd Lions Collection</h4>
 							<p>
 								<span>
@@ -142,4 +143,4 @@ const MaryHill: NextPage = () => {
 	)
 }
 
-export default MaryHill
+export default GirlsPool

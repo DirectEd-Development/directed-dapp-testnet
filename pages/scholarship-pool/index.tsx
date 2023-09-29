@@ -90,7 +90,7 @@ const ScholarshipPool: NextPage = () => {
 							schoolAlias='Kagumo High'
 							infoLink='https://directed.notion.site/Kagumo-High-School-bf13e9c623be4480a5a5c0aac3ebed18'
 							image='/static/images/djed-scholars.jpg'
-							donateLink='/kagumo'
+							donateLink='/generalpool'
 							stakeAdd='stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv'
 							nftsleft='3'
 						/>
@@ -102,7 +102,7 @@ const ScholarshipPool: NextPage = () => {
 							schoolAlias="Mang'u High"
 							infoLink='https://directed.notion.site/Mang-u-High-30fe2b6847864743b579dfd38f0d4f46'
 							image='/static/images/mangu.jpg'
-							donateLink='/mangu'
+							donateLink='/boyspool'
 							stakeAdd='stake178c0hsmp3ya69aqvntdnanp2d3cqaj3kmlmjctalw8k5luq6strwv'
 							nftsleft='3'
 						/>
@@ -114,7 +114,7 @@ const ScholarshipPool: NextPage = () => {
 							schoolAlias="MaryHill Girl's High"
 							infoLink='https://directed.notion.site/Maryhill-Girl-s-High-School-ef8ca3c4c9d94935bb882a18799b2485'
 							image='/static/images/mary-hill.jpg'
-							donateLink='/maryhill'
+							donateLink='/girlspool'
 							stakeAdd='stake179dedwdltct8y0cfak5x54aemazeay6lxfscee8qeer7esqfswem9'
 							nftsleft='1'
 						/>

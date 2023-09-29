@@ -22,7 +22,7 @@ const GeneralPool: NextPage = () => {
 			title: option.title,
 			amount: option.amount,
 			image: option.image,
-			school: 'kagumo',
+			school: 'General Pool',
 		})
 		dispatch(setClose())
 	}
@@ -33,7 +33,7 @@ const GeneralPool: NextPage = () => {
 			title: 'Custom',
 			amount: custom,
 			image: '',
-			school: 'kagumo',
+			school: 'General Pool',
 		})
 		dispatch(setOpen())
 	}
@@ -46,7 +46,7 @@ const GeneralPool: NextPage = () => {
 				title: option.title,
 				amount: option.amount,
 				image: option.image,
-				school: 'kagumo',
+				school: 'General Pool',
 			})
 			dispatch(setOpen())
 		}
@@ -67,7 +67,7 @@ const GeneralPool: NextPage = () => {
 							/>
 						</div>
 						<div>
-							<h3>Donate to Kagumo High School</h3>
+							<h3>Donate to DirectEd Scholars Pool</h3>
 							<h4>DirectEd Lions Collection</h4>
 
 							<p>
