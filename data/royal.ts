@@ -4,13 +4,13 @@ export const data = [
 		title: 'Jonako Kariala',
 		image: '/static/images/Directed Royals/Kagumo-Royals/Jonako-Kariala.png',
 		url: '',
-		school: 'kagumo',
+		school: 'generalpool',
 	},
 	{
 		title: 'Mirca Teluji',
 		image: '/static/images/Directed Royals/Kagumo-Royals/Mirca-Teluji.png',
 		url: '',
-		school: 'kagumo',
+		school: 'generalpool',
 	},
 
 	// Data for Mang'u High

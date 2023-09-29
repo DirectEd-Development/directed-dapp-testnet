@@ -6,7 +6,6 @@ import { Button, CustomAmountInput, Layout, Meta, TierCard } from '../../compone
 import { lionOptions, noLionOptions } from '../../lib/donorAmounts'
 import { useDispatch } from 'react-redux'
 import { OptionTiers } from '../../types/tiers'
-import Timer from '../../components/Timer/Timer'
 import { setClose, setOpen } from '../../hooks/redux/closeTier'
 
 const GeneralPool: NextPage = () => {
@@ -22,7 +21,7 @@ const GeneralPool: NextPage = () => {
 			title: option.title,
 			amount: option.amount,
 			image: option.image,
-			school: 'General Pool',
+			school: 'generalpool',
 		})
 		dispatch(setClose())
 	}
@@ -33,7 +32,7 @@ const GeneralPool: NextPage = () => {
 			title: 'Custom',
 			amount: custom,
 			image: '',
-			school: 'General Pool',
+			school: 'generalpool',
 		})
 		dispatch(setOpen())
 	}
@@ -46,7 +45,7 @@ const GeneralPool: NextPage = () => {
 				title: option.title,
 				amount: option.amount,
 				image: option.image,
-				school: 'General Pool',
+				school: 'generalpool',
 			})
 			dispatch(setOpen())
 		}

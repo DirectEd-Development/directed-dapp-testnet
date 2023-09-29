@@ -22,9 +22,6 @@ export default function Home() {
 					<div className='nft-portal__assets'>
 						<div className='nft-portal__assets_header'>
 							<h3>Pick which Hero you’d like</h3>
-							<Link href='/update-metadata'>
-								<Button disabled variant='primary'>Edit Metadata</Button>
-							</Link>
 						</div>
 						{data
 							.filter((item) => item.school === query)
