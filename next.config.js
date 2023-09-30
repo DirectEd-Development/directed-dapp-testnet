@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
 	images: {
-	  domains: ['kfdniefadaanbjodldohaedphafoffoh'],
+	  domains: ['kfdniefadaanbjodldohaedphafoffoh', "gerowallet.io"],
 	},
 	webpack(config, { isServer, dev }) {
 	  config.experiments = {
