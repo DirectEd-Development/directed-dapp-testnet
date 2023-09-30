@@ -23,7 +23,7 @@ const GirlsPool: NextPage = () => {
 			title: option.title,
 			amount: option.amount,
 			image: option.image,
-			school: "GirlsPool",
+			school: "girlspool",
 		});
 		dispatch(setClose())
 	}
@@ -34,7 +34,7 @@ const GirlsPool: NextPage = () => {
 			title: "Custom",
 			amount: custom,
 			image: "",
-			school: "GirlsPool"
+			school: "girlspool"
 		});
 		dispatch(setOpen())
 	}
@@ -47,7 +47,7 @@ const GirlsPool: NextPage = () => {
 				title: option.title,
 				amount: option.amount,
 				image: option.image,
-				school: "GirlsPool",
+				school: "girlspool",
 			});
 			dispatch(setOpen())
 		 }

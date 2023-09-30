@@ -23,7 +23,7 @@ const BoysPool: NextPage = () => {
 			title: option.title,
 			amount: option.amount,
 			image: option.image,
-			school: 'Boys Pool',
+			school: 'boyspool',
 		})
 		dispatch(setClose())
 	}
@@ -34,7 +34,7 @@ const BoysPool: NextPage = () => {
 			title: 'Custom',
 			amount: custom,
 			image: '',
-			school: 'Boys Pool',
+			school: 'boyspool',
 		})
 		dispatch(setOpen())
 	}
@@ -49,7 +49,7 @@ const BoysPool: NextPage = () => {
 				title: option.title,
 				amount: option.amount,
 				image: option.image,
-				school: 'Boys Pool',
+				school: 'boyspool',
 			})
 			dispatch(setOpen())
 		}
