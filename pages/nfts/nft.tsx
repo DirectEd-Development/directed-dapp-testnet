@@ -59,7 +59,7 @@ export default function nft() {
                     target='_blank'
                     key={item.id}
                     href={{
-                      pathname: `/update-metadata`,
+                      pathname: `/`,
                       query: item.uid,
                     }}
                   >
