@@ -144,7 +144,7 @@ export async function mintStudentToken(address) {
     const details = L.getAddressDetails(address)
     const PKH = details.paymentCredential.hash;
     // const address = details.address.bech32;
-    const unit = studentTokenPolicyID + PKH;
+    const unit = studentTokenPolicyID + PKH; 
 
     const tx = await lucid
         .newTx()
