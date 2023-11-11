@@ -66,7 +66,7 @@ const GeneralPool: NextPage = () => {
 							/>
 						</div>
 						<div>
-							<h3>Donate to DirectEd Scholars Pool</h3>
+							<h3>Fund scholarships with crypto - get a DirectEd Lion NFT</h3>
 							<h4>DirectEd Lions Collection</h4>
 
 							<p>
@@ -91,7 +91,7 @@ const GeneralPool: NextPage = () => {
 							</div>
 						</div>
 						<div className='donate__info'>
-							<span> Direct Donation</span>
+							<span> Fund scholarships with credit card</span>
 							<p>No DirectEd Lions Collection NFT</p>
 							{isCustom ? (
 								<div className='donate__tiers'>
