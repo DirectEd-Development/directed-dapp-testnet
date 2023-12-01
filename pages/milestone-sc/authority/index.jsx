@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useState } from "react";
 import * as L from "lucid-cardano";
-import { Button, Layout, Meta } from '../../../components';
-import { checkAuthorityCredentials } from '../../api/lucid/pkh';
-import { mintMilestoneToken } from '../../api/lucid/functions';
+import { Button, Layout, Meta } from "../../../components";
+import { checkAuthorityCredentials } from "../../api/lucid/pkh";
+import { mintMilestoneToken } from "../../api/lucid/functions";
 
 const authority = () => {
   const [inputValue, setInputValue] = useState("");
@@ -12,11 +12,18 @@ const authority = () => {
   };
 
   const handleLucid = async () => {
-    const [address, milestone] = inputValue.split(',');
+    const [address, milestone] = inputValue.split(",");
 
     console.log(`User ${address} tokens with milestone ${milestone}`);
 
-    const lucid = await L.Lucid.new();
+    const lucid = await L.Lucid.new(
+      new L.Blockfrost(
+        "https://cardano-preprod.blockfrost.io/api/v0",
+        "preprodkVTexzRSG7nvhxXWegyOulGyNmSJyhx5"
+      ),
+      "Preprod"
+    );
+    
     const api = await window.cardano.eternl.enable();
     lucid.selectWallet(api);
     const authaddress = await lucid.wallet.address();
@@ -25,7 +32,7 @@ const authority = () => {
     const isTrue = checkAuthorityCredentials(pkh);
 
     if (isTrue) {
-      const tx = await mintMilestoneToken(address, parseInt(milestone));
+      const tx = await mintMilestoneToken(lucid, address, parseInt(milestone));
       console.log(tx);
     }
     // Redirect to another page after minting (e.g., a success page)
@@ -40,7 +47,10 @@ const authority = () => {
       />
       <div className="authority-page">
         <h1>Welcome, Authority!</h1>
-        <p>Mint the required tokens by entering the Authority address and milestone below:</p>
+        <p>
+          Mint the required tokens by entering the Authority address and
+          milestone below:
+        </p>
         <input
           type="text"
           placeholder="Enter address,milestone"
@@ -48,7 +58,11 @@ const authority = () => {
           onChange={handleWalletAddress}
         />
         <div className="authority-page__buttons">
-          <Button variant="primary" onClick={handleLucid} disabled={!inputValue}>
+          <Button
+            variant="primary"
+            onClick={handleLucid}
+            disabled={!inputValue}
+          >
             Mint Tokens
           </Button>
         </div>
